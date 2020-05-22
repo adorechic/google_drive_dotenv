@@ -4,8 +4,16 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 ## Usage
 ```
+Commands:
+  google_drive_dotenv export [key]    # Export Spreadsheet to env file
+  google_drive_dotenv help [COMMAND]  # Describe available commands or one specific command
+
 Usage:
   google_drive_dotenv export [key]
+
+Options:
+  o, [--output=OUTPUT]
+                        # Default: .env
 
 Export Spreadsheet to env file
 ```
