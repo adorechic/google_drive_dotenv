@@ -4,6 +4,7 @@ require 'google_drive'
 module GoogleDriveDotenv
   class CLI < Thor
     desc "export [key]", "Export Spreadsheet to env file"
+    option "output", aliases: "o", type: :string, default: ".env"
     def export(key)
       config_path = File.expand_path("~/google_config.json")
 
@@ -14,7 +15,7 @@ module GoogleDriveDotenv
       session = GoogleDrive::Session.from_config(config_path)
 
       sheet = session.spreadsheet_by_key(key).worksheets[0]
-      File.open('.env', 'wb') do |file|
+      File.open(options['output'], 'wb') do |file|
         (1..sheet.num_rows).each do |row|
           key = sheet[row, 1]
           value = sheet[row, 2]
