@@ -14,6 +14,8 @@ Usage:
 Options:
   o, [--output=OUTPUT]
                         # Default: .env
+  c, [--config=CONFIG]
+                        # Default: ~/google_config.json
 
 Export Spreadsheet to env file
 ```

@@ -5,8 +5,9 @@ module GoogleDriveDotenv
   class CLI < Thor
     desc "export [key]", "Export Spreadsheet to env file"
     option "output", aliases: "o", type: :string, default: ".env"
+    option "config", aliases: "c", type: :string, default: "~/google_config.json"
     def export(key)
-      config_path = File.expand_path("~/google_config.json")
+      config_path = File.expand_path(options['config'])
 
       unless File.exist?(config_path)
         raise "Please put #{config_path}"
