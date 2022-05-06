@@ -6,6 +6,8 @@ require 'launchy'
 
 module GoogleDriveDotenv
   class App < Sinatra::Base
+    set :server, %w(webrick)
+
     class << self
       attr_accessor :credentials, :output, :key
 
