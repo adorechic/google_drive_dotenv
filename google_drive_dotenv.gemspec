@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'thor'
   spec.add_dependency 'google_drive'
+  spec.add_dependency 'sinatra'
+  spec.add_dependency 'launchy'
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 13.0"
